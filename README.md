@@ -6,3 +6,4 @@
 
 ## その他
 - JUnit5からはメソッドはpublic付けなくてもよい
+- testと打ち`ctrl + Space`でテストメソッド補完
