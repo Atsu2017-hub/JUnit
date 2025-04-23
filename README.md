@@ -7,3 +7,6 @@
 ## その他
 - JUnit5からはメソッドはpublic付けなくてもよい
 - testと打ち`ctrl + Space`でテストメソッド補完
+- Throwableには、ErrorとExceptionがある。
+  - Errorは回復不可能(スタックオーバーフロー、メモリ不足等)、try-catchは推奨されない。
+  - ExceptionクラスはRuntimeExceptionクラス(配列の未定義indexの参照など)とその他のクラス(IOExceptionなど)に分類される。その他のクラスは検査例外でRuntimeExceptionクラスは非検査例外(try-catchいらない)。
