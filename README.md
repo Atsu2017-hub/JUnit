@@ -11,6 +11,8 @@
 
 ## JUnit4からJUnit5への変更
 - メソッドはpublic付けなくてもよい(private以外)
-- assertThatは廃止(外部ライブラリを導入する必要あり)
+- assertThatはJUnit5には組み込まれていない(外部ライブラリ↓を導入する必要あり)
+  - import static org.hamcrest.MatcherAssert.*;
+  - import static org.hamcrest.Matchers.*;
 - @Test(expected or timeout = ...)からAssertThrows, @Timeoutに変更
 - Before, BeforeClassからBeforeEach, BeforeAllに変更。Afterも同様。 
