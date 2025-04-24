@@ -8,6 +8,8 @@
 - Throwableには、ErrorとExceptionがある。
   - Errorは回復不可能(スタックオーバーフロー、メモリ不足等)、try-catchは推奨されない。
   - ExceptionクラスはRuntimeExceptionクラス(配列の未定義indexの参照など)とその他のクラス(IOExceptionなど)に分類される。その他のクラスは検査例外でRuntimeExceptionクラスは非検査例外(try-catchいらない)。
+  - `==`：参照の比較（アドレスの同一性）
+  - `.equals()`：内容の比較（オブジェクトのフィールドの等価性）
 
 ## JUnit4からJUnit5への変更
 - メソッドはpublic付けなくてもよい(private以外)
