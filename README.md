@@ -12,5 +12,5 @@
 ## JUnit4からJUnit5への変更
 - メソッドはpublic付けなくてもよい(private以外)
 - assertThatは廃止(外部ライブラリを導入する必要あり)
-- @Test(expected or timeout = ...)から@expected, @Timeoutに変更
+- @Test(expected or timeout = ...)からAssertThrows, @Timeoutに変更
 - Before, BeforeClassからBeforeEach, BeforeAllに変更。Afterも同様。 
