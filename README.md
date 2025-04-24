@@ -8,6 +8,7 @@
   - matcherの正体はIsEqualsオブジェクト。IsEqualsオブジェクトはexpectedのフィールドを保持している。またmatchesメソッド(戻り値boolean)が定義されていて実装必須。このメソッドで比較している。
   - デフォルトのmatchesメソッドではequalsによる比較。
   - プリミティブ型はオートボクシング	int → Integerされ、equalsによって内容比較。
+  - MatcherのサブクラスがIsEqualやNotMatcher(Matcherクラスを保持し、matchメソッドでは正誤を反転)
 
 ## その他
 - Throwableには、ErrorとExceptionがある。
