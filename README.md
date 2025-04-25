@@ -52,4 +52,18 @@
   - import static org.hamcrest.MatcherAssert.*;
   - import static org.hamcrest.Matchers.*;
 - @Test(expected or timeout = ...)からAssertThrows, @Timeoutに変更
-- Before, BeforeClassからBeforeEach, BeforeAllに変更。Afterも同様。 
+- Before, BeforeClassからBeforeEach, BeforeAllに変更。Afterも同様。
+- Enclosedから@Nestedへ
+  - ~~~Java
+    class SampleTest {
+      @Nested
+      class テストパターン1 {
+       
+      }
+
+      @Nested
+      class テストパターン2 {
+        
+      }
+    }
+    ~~~
