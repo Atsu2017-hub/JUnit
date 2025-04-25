@@ -30,13 +30,21 @@
     3. このmatchesメソッドでは`!IsEquals.matches(actual)`を返す。
     4. IsEquals.matchesではexpected.equal(actual)を検証
     5. このようにして委譲していく。
-
+  - describeToではDescriptionに文字列を入れていく。appendValueは""付きで表示され、appendTextはなし。
 ## その他
 - Throwableには、ErrorとExceptionがある。
   - Errorは回復不可能(スタックオーバーフロー、メモリ不足等)、try-catchは推奨されない。
   - ExceptionクラスはRuntimeExceptionクラス(配列の未定義indexの参照など)とその他のクラス(IOExceptionなど)に分類される。その他のクラスは検査例外でRuntimeExceptionクラスは非検査例外(try-catchいらない)。
   - `==`：参照の比較（アドレスの同一性）
   - `.equals()`：内容の比較（オブジェクトのフィールドの等価性）
+  - .classpathにはclaspathentryが存在。
+  - |kindの値|意味|例|
+    |:-------|:---|:-|
+    |src|ソースフォルダ|path="src" は src をクラスパスに含める|
+    |lib|	JARファイルなどのライブラリ|path="lib/some-lib.jar"|
+    |con|	Eclipseのコンテナ（JREとか)|path="org.eclipse.jdt.launching.JRE_CONTAINER"|
+    |output|コンパイル後のクラス出力先|path="bin" など|
+
 
 ## JUnit4からJUnit5への変更
 - メソッドはpublic付けなくてもよい(private以外)
