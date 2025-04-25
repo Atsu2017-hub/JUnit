@@ -37,7 +37,7 @@
   - ExceptionクラスはRuntimeExceptionクラス(配列の未定義indexの参照など)とその他のクラス(IOExceptionなど)に分類される。その他のクラスは検査例外でRuntimeExceptionクラスは非検査例外(try-catchいらない)。
   - `==`：参照の比較（アドレスの同一性）
   - `.equals()`：内容の比較（オブジェクトのフィールドの等価性）
-  - .classpathにはclaspathentryが存在。
+  - .classpathにはclaspathentryが存在。プロジェクトをIDE上に再現、展開する。
   - |kindの値|意味|例|
     |:-------|:---|:-|
     |src|ソースフォルダ|path="src" は src をクラスパスに含める|
