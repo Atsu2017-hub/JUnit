@@ -44,6 +44,19 @@
     |lib|	JARファイルなどのライブラリ|path="lib/some-lib.jar"|
     |con|	Eclipseのコンテナ（JREとか)|path="org.eclipse.jdt.launching.JRE_CONTAINER"|
     |output|コンパイル後のクラス出力先|path="bin" など|
+  - enumについて
+    - ~~~Java
+      public class OuterClass {
+        public enum Color {
+          RED, GREEN, BLUE
+        }
+      }
+      ~~~
+      このときOuterClass.Color.REDで指定。import static OuterClass.Color.REDでREDで指定できる。
+      メリットはカプセル化、enumの複数定義可能。
+  - Javaの三項if文
+    - 条件式 ? 真の場合の値 : 偽の場合の値
+
 
 
 ## JUnit4からJUnit5への変更
