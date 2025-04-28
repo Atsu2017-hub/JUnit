@@ -81,3 +81,14 @@
       }
     }
     ~~~
+- パラメータ化テスト
+  - Theoriesから以下に変更
+  - ~~~Java
+    @ParameterizedTest
+    @ValueSource(strings = { "foo", "bar", "baz" })
+    void 文字列テスト(String keyword) throws Exception {
+      // do something
+    }
+    ~~~
+  - JUnit5 では: 繰り返し対象がプリミティブ型の場合は, @ParameterizedTest + @ValueSource. 繰り返し対象がオブジェクトの場合は, @ParameterizedTest + @MethodSource
+
