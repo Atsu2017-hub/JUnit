@@ -72,9 +72,13 @@
       - MyClass.classで.classファイルの読み込み。Classオブジェクトとして保持。このクラスオブジェクトはMyClassの構造(フィールド、メソッド)などを保持。
       - getMethodでClassオブジェクトからsayHelloのメソッドオブジェクトを返す。
       - Methodオブジェクトのinvokeメソッドで、JVMに「このインスタンスのこのメソッドを実行して」と頼む。
-
-
-
+    - ~~~Java
+        for (Method testMethod : testMethods) {
+          MyTest testInstance = new MyTest();     // ← インスタンス生成
+          testInstance.setUp();                   // @Before 呼び出し
+          testMethod.invoke(testInstance);        // テスト実行
+        }
+        ~~~
 
 ## JUnit4からJUnit5への変更
 - メソッドはpublic付けなくてもよい(private以外)
@@ -107,4 +111,5 @@
     }
     ~~~
   - JUnit5 では: 繰り返し対象がプリミティブ型の場合は, @ParameterizedTest + @ValueSource. 繰り返し対象がオブジェクトの場合は, @ParameterizedTest + @MethodSource(組み合わせ可能)
+  - @Rulesが廃止、代わりに@ExtendWith(VerifierExtension.class)。
 
