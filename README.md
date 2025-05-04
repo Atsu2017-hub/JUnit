@@ -130,3 +130,10 @@
   - JUnit5 では: 繰り返し対象がプリミティブ型の場合は, @ParameterizedTest + @ValueSource. 繰り返し対象がオブジェクトの場合は, @ParameterizedTest + @MethodSource(組み合わせ可能)
   - @Rulesが廃止、代わりに@ExtendWith(VerifierExtension.class)。
 
+## Maven
+- JUnit Platform：JUnit5の実行基盤。テストの実行、結果のレポートなどのインフラを提供
+- Mavenではjunit-jupiter-api(テストを書く際必要)とjunit-jupiter-engine(Platform上でテストの実行に必要)の2つが必須。
+- maven-surefire-pluginはmvn testを実行したとき、テストクラスを自動で検出、実行する。junit-jupiter-engineにテストクラスを渡し実行。テストを検出 → 実行 → 結果を判断・出力。様々な設定でテストの挙動を制御(includeなど)
+  - Maven が mvn test を実行→ Surefire Plugin が起動→ JUnit Platform の Launcher を呼び出す→ Platform が利用可能なテストエンジン（例: junit-jupiter-engine）を検出→ 各エンジンが、対応するテスト（例: JUnit5 のクラス）を実行→ 結果を Platform 経由で受け取り、Surefire がレポートを生成
+  - JUnit 5 を使うには、バージョン 3.0.0-M5 以上 が必要なためpomに記入
+  - engine検索時に複数のエンジンがあれば、それぞれのテストメソッドにおいて、そのバージョンに応じてエンジンが使用される。
