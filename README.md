@@ -137,3 +137,5 @@
   - Maven が mvn test を実行→ Surefire Plugin が起動→ JUnit Platform の Launcher を呼び出す→ Platform が利用可能なテストエンジン（例: junit-jupiter-engine）を検出→ 各エンジンが、対応するテスト（例: JUnit5 のクラス）を実行→ 結果を Platform 経由で受け取り、Surefire がレポートを生成
   - JUnit 5 を使うには、バージョン 3.0.0-M5 以上 が必要なためpomに記入
   - engine検索時に複数のエンジンがあれば、それぞれのテストメソッドにおいて、そのバージョンに応じてエンジンが使用される。
+- **/Test*.java　surefireが探すテストファイル。
+  - **/ : プロジェクトルート以下のすべてのフォルダを対象
