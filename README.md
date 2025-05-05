@@ -142,7 +142,7 @@ https://oohira.github.io/junit5-doc-jp/user-guide/
   - engine検索時に複数のエンジンがあれば、それぞれのテストメソッドにおいて、そのバージョンに応じてエンジンが使用される。
 - **/Test*.java　surefireが探すテストファイル。
   - **/ : プロジェクトルート以下のすべてのフォルダを対象
-- タグ または タグ式 をテスト対象に含めるには、groups を指定します。テスト対象から除外するには、excludedGroups を指定します。
+- タグ または タグ式 をテスト対象に含めるには、groups を指定します。テスト対象から除外するには、excludedGroups を指定します。groupsに指定したグループのみが実行される。excludeGroupsに指定したグループのみを除外する。
   - ~~~
     <plugin>
             <artifactId>maven-surefire-plugin</artifactId>
@@ -153,3 +153,4 @@ https://oohira.github.io/junit5-doc-jp/user-guide/
             </configuration>
     </plugin>
     ~~~
+  - cleanを実行すると、target/の成果物が削除される。
